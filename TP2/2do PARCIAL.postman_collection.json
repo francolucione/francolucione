@@ -1,0 +1,504 @@
+{
+	"info": {
+		"_postman_id": "8314b7a6-b885-4ab5-a67d-ef61048fbd79",
+		"name": "2do PARCIAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44784895"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"jop@example.com\",\r\n  \"clave\": \"12345\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/login.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"login.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"lucio@example.com\",\r\n  \"clave\": \"nuevaClave2\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/logout.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"logout.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Usuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/controlador.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"controlador.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Mascotas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/controladorM.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"controladorM.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Turnos/Disponibles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n"
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/controladorT.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"controladorT.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mis Turnos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/controladorT.php?misTurnos=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"controladorT.php"
+					],
+					"query": [
+						{
+							"key": "misTurnos",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Usuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"Uusario Para borrar\",\r\n        \"email\": \"saddsadsa@example.com\",\r\n        \"clave\": 12345,\r\n        \"rol\": \"comun\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/controlador.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"controlador.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Mascota",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"Gato Juan Pérez\",\r\n        \"especie\": \"Gato\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/controladorM.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"controladorM.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": 1,\r\n        \"valorEditado\": \"nombre\",\r\n        \"nuevoValor\": \"Lucio\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/controlador.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"controlador.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Solicitar Turno (ID_Turno, ID_Mascota)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"turno_id\": 12,\r\n  \"mascota_id\": 5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/controladorT.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"controladorT.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancelar Turno (ID_Turno)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"turno_id\": 12\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/controladorT.php?cancelar=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"controladorT.php"
+					],
+					"query": [
+						{
+							"key": "cancelar",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inhabilitar Fecha",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fecha\": \"2025-06-20\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/controladorT.php?inhabilitar=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"controladorT.php"
+					],
+					"query": [
+						{
+							"key": "inhabilitar",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Turno (Id, Estado, Comentario)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"4\",\r\n  \"estado\": \"SUSPENDIDO\",\r\n  \"comentario\": \"Prueba comentario UNO. Precio mil millones\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/controladorT.php?editar=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"controladorT.php"
+					],
+					"query": [
+						{
+							"key": "editar",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/controlador.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"controlador.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generar Turnos CUIDADO NO DUPLICAR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/EjerciciosSQL/TP2/controladorT.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"EjerciciosSQL",
+						"TP2",
+						"controladorT.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
